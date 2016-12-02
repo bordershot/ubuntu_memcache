@@ -1,0 +1,9 @@
+<% if node['memcached']['daemonize'] %>
+-d
+<% end %>
+logfile <%= node['memcached']['logfile'] %>
+-m <%= node['memcached']['memory'] %>
+-p <%= node['memcached']['port'] %>
+-u <%= node['memcached']['user'] %>
+-l <%= node['memcached']['listen_ip_address'] %>
+-c <%= node['memcached']['max_connections'] %>
